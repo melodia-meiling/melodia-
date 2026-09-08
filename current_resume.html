@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>曾美玲 · 个人简历</title>
+<meta name="description" content="曾美玲个人简历 - 项目助理/AI产品助理/AI运营助理" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #ffffff; --bg-subtle: #f7f8fa; --surface: #ffffff;
+    --border: #e8eaef; --text: #15161a; --text-2: #4b4f58; --text-3: #868a94;
+    --accent: #4f46e5; --accent-2: #a855f7; --accent-soft: #eef2ff;
+    --grad: linear-gradient(120deg, #4f46e5, #a855f7 75%);
+    --radius: 18px; --radius-sm: 10px; --shadow: 0 10px 30px rgba(16,16,24,.08);
+    --font: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  }
+  [data-theme="dark"] {
+    --bg: #0b0c10; --bg-subtle: #12131a; --surface: #16181f;
+    --border: #252833; --text: #f0f1f5; --text-2: #b4b8c2; --text-3: #717684;
+    --accent: #6366f1; --accent-2: #a855f7; --accent-soft: #1a1838;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+
+  /* Actions */
+  .actions { position: sticky; top: 0; z-index: 50; background: color-mix(in srgb, var(--bg) 90%, transparent); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
+  .actions-inner { display: flex; justify-content: space-between; align-items: center; height: 60px; }
+  .back { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600; color: var(--text-2); }
+  .back:hover { color: var(--accent); }
+  .btn { display: inline-flex; align-items: center; gap: 7px; font-weight: 600; font-size: 14px; padding: 10px 18px; border-radius: 999px; border: 1px solid transparent; cursor: pointer; transition: all .2s; }
+  .btn-primary { background: var(--accent); color: #fff; box-shadow: var(--shadow); }
+  .btn-primary:hover { background: var(--accent-2); transform: translateY(-1px); }
+  .btn-ghost { background: var(--surface); color: var(--text); border-color: var(--border); }
+  .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+  .theme-btn { width: 36px; height: 36px; border-radius: 10px; border: 1px solid var(--border); background: var(--surface); cursor: pointer; font-size: 15px; }
+
+  /* Header */
+  header { padding: 42px 0 28px; }
+  .header-grid { display: grid; grid-template-columns: auto 1fr; gap: 22px; align-items: center; }
+  @media (max-width: 560px) { .header-grid { grid-template-columns: 1fr; text-align: center; } }
+  .avatar { width: 92px; height: 92px; border-radius: 24px; background: var(--grad); color: #fff; display: grid; place-items: center; font-size: 38px; font-weight: 900; box-shadow: var(--shadow); }
+  h1 { margin: 0; font-size: 32px; font-weight: 900; letter-spacing: -.02em; }
+  .subtitle { margin: 6px 0 0; color: var(--text-2); font-size: 16px; font-weight: 500; }
+  .contact-row { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 10px; }
+  .contact-row a { font-size: 13.5px; color: var(--text-2); background: var(--bg-subtle); border: 1px solid var(--border); padding: 6px 13px; border-radius: 999px; transition: all .2s; }
+  .contact-row a:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* Sections */
+  main { padding-bottom: 60px; }
+  section { margin-bottom: 34px; }
+  .section-title { font-size: 17px; font-weight: 800; letter-spacing: .02em; color: var(--accent); text-transform: uppercase; margin: 0 0 14px; padding-bottom: 8px; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 8px; }
+
+  /* Cards */
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 20px; box-shadow: var(--shadow); margin-bottom: 14px; }
+  .card-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 6px; }
+  @media (max-width: 560px) { .card-head { flex-direction: column; gap: 4px; } }
+  .card-head h3 { margin: 0; font-size: 16px; font-weight: 700; }
+  .card-head .date { font-size: 12.5px; color: var(--accent); font-weight: 600; white-space: nowrap; }
+  .card-head .org { font-size: 13.5px; color: var(--text-2); font-weight: 500; }
+  .card p { margin: 0; font-size: 14px; color: var(--text-2); line-height: 1.7; }
+  .card ul { margin: 10px 0 0; padding-left: 18px; color: var(--text-2); font-size: 14px; line-height: 1.8; }
+  .card li { margin-bottom: 4px; }
+
+  /* Lists */
+  .tag-list { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tag { font-size: 13px; background: var(--accent-soft); color: var(--accent); padding: 5px 12px; border-radius: 999px; font-weight: 600; }
+
+  /* Grid */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 680px) { .two-col { grid-template-columns: 1fr; } }
+
+  /* Summary */
+  .summary { background: var(--accent-soft); border: 1px solid color-mix(in srgb, var(--accent) 18%, transparent); border-radius: var(--radius); padding: 18px 20px; }
+  .summary p { margin: 0; font-size: 14.5px; line-height: 1.8; color: var(--text); }
+
+  /* Print */
+  @media print {
+    .actions, .theme-btn, .btn-ghost { display: none !important; }
+    body { background: #fff; color: #000; }
+    .card, .summary { box-shadow: none; border: 1px solid #ddd; break-inside: avoid; }
+    a { color: #000; text-decoration: none; }
+    .section-title { color: #4f46e5; border-bottom-color: #ddd; }
+  }
+</style>
+</head>
+<body>
+
+<div class="actions">
+  <div class="wrap actions-inner">
+    <a class="back" href="index.html">← 返回作品集</a>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <button class="theme-btn" id="themeBtn" title="切换主题">🌙</button>
+      <a class="btn btn-primary" href="resume.pdf" download>📄 下载 PDF 简历</a>
+    </div>
+  </div>
+</div>
+
+<header>
+  <div class="wrap">
+    <div class="header-grid">
+      <div class="avatar">曾</div>
+      <div>
+        <h1>曾美玲</h1>
+        <p class="subtitle">项目助理 / AI 产品助理 / AI 运营助理 · 成都</p>
+        <div class="contact-row">
+          <a href="tel:19181307598">📱 191 8130 7598</a>
+          <a href="mailto:1181931449@qq.com">✉️ 1181931449@qq.com</a>
+          <a>📍 四川成都</a>
+          <a>🎂 2000.08</a>
+          <a>🟰 中共党员</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section>
+    <div class="summary">
+      <p><b>中共党员</b>，拥有事业单位行政助理、项目协调及自媒体实践经验。擅长流程梳理搭建，跨部门沟通协调能力突出，熟练使用 Office 与 AI 工具提升工作效率。工作严谨细致、执行力强，可独立完成数据整理、活动执行、内容素材制作等工作，掌握摄影剪辑技能。熟悉体制内办事逻辑，兼具新媒体实操思维，适应力与抗压能力良好，能够高效处理多线程综合事务，踏实靠谱。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">求职意向</h2>
+    <div class="two-col">
+      <div class="card"><div class="card-head"><h3>意向岗位</h3></div><p>项目助理 / AI 产品助理 / AI 运营助理</p></div>
+      <div class="card"><div class="card-head"><h3>意向城市 / 类型</h3></div><p>成都 · 社招</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">教育经历</h2>
+    <div class="card">
+      <div class="card-head">
+        <div><h3>华北电力大学</h3><span class="org">物流工程与管理 · 非全日制硕士</span></div>
+        <span class="date">2025.09 - 2028.06</span>
+      </div>
+      <ul>
+        <li>GPA 3.5/5.0，专业前 15%</li>
+        <li>核心课程：供应链管理、采购与合同管理、工程项目管理</li>
+        <li>主修工程计价、招投标、BIM 建模相关课程</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-head">
+        <div><h3>成都理工大学工程技术学院</h3><span class="org">工程造价 · 本科</span></div>
+        <span class="date">2021.09 - 2025.06</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">工作经历</h2>
+    <div class="card">
+      <div class="card-head">
+        <div><h3>行政管理助理</h3><span class="org">成都航空职业技术大学 · 学校教育</span></div>
+        <span class="date">2025.09 - 2026.08</span>
+      </div>
+      <ul>
+        <li>负责教务文件整理、课程与成绩台账维护，确保资料准确无误</li>
+        <li>统筹人才引进面试全流程，做好候选人对接、资料归档工作</li>
+        <li>协助校内设备采购相关资料整理、单据归集归档</li>
+        <li>对接各部门完成会议、物资、场地等协调工作</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">实习经历</h2>
+    <div class="card">
+      <div class="card-head">
+        <div><h3>招投标助理</h3><span class="org">四川成绵苍巴高速公路有限责任公司</span></div>
+        <span class="date">2022.07 - 2022.08</span>
+      </div>
+      <ul>
+        <li>整理招投标图纸、合同文件，记录项目时间节点</li>
+        <li>辅助完成投标数据统计、基础对比表格制作</li>
+        <li>熟悉基建项目投标、资料报审基础流程</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-head">
+        <div><h3>执行委员</h3><span class="org">四川省青年志愿者服务中心</span></div>
+        <span class="date">2023.09 - 2024.09</span>
+      </div>
+      <ul>
+        <li>运营官方公众号，日常推文编辑发布</li>
+        <li>参与线上志愿征集活动策划、宣传与报名信息整理</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">项目经历</h2>
+    <div class="card">
+      <div class="card-head">
+        <div><h3>自媒体吃播账号运营 · 从 0 到 1000 粉</h3><span class="org">小红书独立运营</span></div>
+        <span class="date">2025.12 - 至今</span>
+      </div>
+      <ul>
+        <li>小红书独立运营，半年涨粉破千，单篇笔记稳定 50+ 赞，累计自然曝光 15 万+</li>
+        <li>完成橱窗开通，落地 3 次品牌商单，掌握内容运营到商业变现全流程</li>
+        <li>借助 AI 工具搭建视频脚本自动化工作流，输入商家信息即可生成适配个人风格的定制脚本</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-head">
+        <div><h3>"鲁班杯" 全国高校 BIM 毕业设计大赛</h3><span class="org">核心成员</span></div>
+        <span class="date">2023.10 - 2024.05</span>
+      </div>
+      <ul>
+        <li>运用 Revit 完成综合体建模、优化消防疏散线路、竞赛汇报材料制作</li>
+        <li>团队作品获得全国三等奖</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">在校经历</h2>
+    <div class="card">
+      <div class="card-head">
+        <div><h3>校团委宣传中心 · 负责人</h3><span class="org">校园宣传活动中心</span></div>
+        <span class="date">2022.07 - 2024.05</span>
+      </div>
+      <ul>
+        <li>主导校园活动宣传策略制定，针对学生群体定位，策划线上线下整合传播方案</li>
+        <li>领导超过 10 人的跨职能团队（内容、设计、拍摄、外联），全程管控进度与质量</li>
+        <li>公众号单篇阅读 1 万+，视频剪辑播放量 10 万+</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-head">
+        <div><h3>成都大运会 · 城市交流志愿者</h3><span class="org">优秀志愿者</span></div>
+        <span class="date">2023.07 - 2023.08</span>
+      </div>
+      <ul>
+        <li>解决行程咨询与翻译问题，获评成都大运会优秀志愿者</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">相关技能</h2>
+    <div class="card">
+      <div class="tag-list">
+        <span class="tag">工程造价 / 工程量计算 / 招标控制价编制</span>
+        <span class="tag">BIM 建模 / AutoCAD / Revit</span>
+        <span class="tag">Word / Excel / PPT 高级应用</span>
+        <span class="tag">公文撰写</span>
+        <span class="tag">英语六级（499 分）</span>
+        <span class="tag">英文资料读写</span>
+        <span class="tag">公众号策划</span>
+        <span class="tag">短视频剪辑（剪映专业版）</span>
+        <span class="tag">摄影摄像</span>
+        <span class="tag">AI 工具辅助研究与写作</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">资格证书</h2>
+    <div class="card">
+      <div class="tag-list">
+        <span class="tag">大学英语六级（499 分）</span>
+        <span class="tag">普通话二甲</span>
+        <span class="tag">全国计算机二级</span>
+        <span class="tag">C1 机动车驾驶证</span>
+        <span class="tag">中职工程造价教师资格证</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">荣誉称号</h2>
+    <div class="card">
+      <div class="tag-list">
+        <span class="tag">四川省优秀大学毕业生</span>
+        <span class="tag">校优秀学生干部</span>
+        <span class="tag">多次校级综合奖学金</span>
+        <span class="tag">成都大运会优秀志愿者</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">兴趣爱好</h2>
+    <div class="card">
+      <p>摄影摄像、短视频剪辑（自媒体视频剪辑播放量 10 万+）；音乐舞蹈（校园歌手大赛 50 强）。</p>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  (function(){
+    var root = document.documentElement, btn = document.getElementById('themeBtn');
+    var saved = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    apply(saved);
+    btn.addEventListener('click', function(){
+      apply(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+      localStorage.setItem('theme', root.getAttribute('data-theme'));
+    });
+    function apply(t){ root.setAttribute('data-theme', t); btn.textContent = t === 'dark' ? '☀️' : '🌙'; }
+  })();
+</script>
+
+</body>
+</html>
