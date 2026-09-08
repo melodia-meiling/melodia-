@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>摄影作品集 · 曾美玲</title>
+<meta name="description" content="曾美玲个人摄影作品集：人像写真、城市旅拍与街头纪实的影像合集。" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #ffffff; --bg-subtle: #f6f7f9; --surface: #ffffff;
+    --border: #ecedf1; --border-strong: #d8dae0;
+    --text: #15161a; --text-2: #565a64; --text-3: #8b8f99;
+    --accent: #4f46e5; --accent-hover: #4338ca; --accent-soft: #eef2ff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', 'Noto Sans SC', sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.6;
+  }
+  .topbar {
+    position: sticky; top: 0; z-index: 50;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 5vw; background: rgba(255,255,255,.92); backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+  }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; }
+  .brand .logo {
+    width: 34px; height: 34px; border-radius: 9px; display: grid; place-items: center;
+    background: linear-gradient(135deg, #4f46e5, #a855f7); color: #fff; font-size: 15px;
+  }
+  .topbar a.back {
+    color: var(--accent); text-decoration: none; font-weight: 600; font-size: 14px;
+    padding: 8px 14px; border-radius: 999px; border: 1px solid var(--border-strong);
+  }
+  .topbar a.back:hover { background: var(--accent-soft); }
+  .hero { padding: 56px 5vw 30px; max-width: 1200px; margin: 0 auto; }
+  .hero .kicker { color: var(--accent); font-weight: 700; font-size: 13px; letter-spacing: .12em; }
+  .hero h1 { font-size: clamp(26px, 4vw, 40px); font-weight: 900; margin: 10px 0 12px; }
+  .hero p { color: var(--text-2); max-width: 720px; }
+  .hero .count { margin-top: 14px; font-size: 13px; color: var(--text-3); }
+  .hero .count b { color: var(--accent); }
+  .grid { columns: 4 240px; column-gap: 14px; padding: 10px 5vw 70px; max-width: 1400px; margin: 0 auto; }
+  .ph {
+    break-inside: avoid; margin: 0 0 14px; border-radius: 14px; overflow: hidden;
+    border: 1px solid var(--border); background: var(--bg-subtle); cursor: zoom-in;
+    transition: transform .18s ease, box-shadow .18s ease;
+  }
+  .ph:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(21,22,26,.10); }
+  .ph img { width: 100%; display: block; }
+  .lb {
+    position: fixed; inset: 0; z-index: 100; display: none;
+    background: rgba(10,10,14,.92); align-items: center; justify-content: center;
+  }
+  .lb.open { display: flex; }
+  .lb img { max-width: 92vw; max-height: 86vh; border-radius: 10px; box-shadow: 0 20px 60px rgba(0,0,0,.5); }
+  .lb .nav, .lb .close {
+    position: absolute; background: rgba(255,255,255,.12); color: #fff; border: none;
+    width: 46px; height: 46px; border-radius: 50%; font-size: 20px; cursor: pointer;
+    display: grid; place-items: center; user-select: none;
+  }
+  .lb .nav:hover, .lb .close:hover { background: rgba(255,255,255,.25); }
+  .lb .prev { left: 3vw; top: 50%; transform: translateY(-50%); }
+  .lb .next { right: 3vw; top: 50%; transform: translateY(-50%); }
+  .lb .close { top: 3vh; right: 3vw; }
+  .lb .counter {
+    position: absolute; bottom: 3.5vh; left: 50%; transform: translateX(-50%);
+    color: rgba(255,255,255,.85); font-size: 13px; letter-spacing: .08em;
+  }
+  footer { text-align: center; color: var(--text-3); font-size: 13px; padding: 26px 0 40px; border-top: 1px solid var(--border); }
+  footer a { color: var(--accent); text-decoration: none; font-weight: 600; }
+</style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="logo">曾</span><span>曾美玲 · 摄影作品集</span></div>
+    <a class="back" href="index.html">← 返回作品集</a>
+  </header>
+
+  <section class="hero">
+    <div class="kicker">PHOTOGRAPHY · 影像合集</div>
+    <h1>摄影作品集</h1>
+    <p>人像写真、城市旅拍与街头纪实的影像合集，覆盖青春人像写真、成都东郊记忆旅拍、胡同光影与毕业季跟拍等系列。</p>
+    <div class="count">共 <b>51</b> 张作品 · 点击任意照片放大浏览，支持键盘 ← → 翻页、Esc 关闭</div>
+  </section>
+
+  <main class="grid" id="grid">
+      <figure class="ph" data-index="0"><img src="assets/photos/微信图片_20250228104046.jpg" alt="微信图片_20250228104046" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="1"><img src="assets/photos/微信图片_202502281040461.jpg" alt="微信图片_202502281040461" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="2"><img src="assets/photos/微信图片_202502281040462.jpg" alt="微信图片_202502281040462" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="3"><img src="assets/photos/微信图片_202502281040463.jpg" alt="微信图片_202502281040463" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="4"><img src="assets/photos/微信图片_202502281040464.jpg" alt="微信图片_202502281040464" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="5"><img src="assets/photos/微信图片_202502281040465.jpg" alt="微信图片_202502281040465" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="6"><img src="assets/photos/微信图片_20250228104131.jpg" alt="微信图片_20250228104131" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="7"><img src="assets/photos/微信图片_202502281041311.jpg" alt="微信图片_202502281041311" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="8"><img src="assets/photos/微信图片_2025022810413110.jpg" alt="微信图片_2025022810413110" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="9"><img src="assets/photos/微信图片_2025022810413111.jpg" alt="微信图片_2025022810413111" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="10"><img src="assets/photos/微信图片_2025022810413112.jpg" alt="微信图片_2025022810413112" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="11"><img src="assets/photos/微信图片_2025022810413113.jpg" alt="微信图片_2025022810413113" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="12"><img src="assets/photos/微信图片_2025022810413114.jpg" alt="微信图片_2025022810413114" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="13"><img src="assets/photos/微信图片_2025022810413115.jpg" alt="微信图片_2025022810413115" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="14"><img src="assets/photos/微信图片_2025022810413116.jpg" alt="微信图片_2025022810413116" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="15"><img src="assets/photos/微信图片_2025022810413117.jpg" alt="微信图片_2025022810413117" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="16"><img src="assets/photos/微信图片_2025022810413118.jpg" alt="微信图片_2025022810413118" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="17"><img src="assets/photos/微信图片_2025022810413119.jpg" alt="微信图片_2025022810413119" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="18"><img src="assets/photos/微信图片_202502281041312.jpg" alt="微信图片_202502281041312" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="19"><img src="assets/photos/微信图片_2025022810413120.jpg" alt="微信图片_2025022810413120" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="20"><img src="assets/photos/微信图片_2025022810413121.jpg" alt="微信图片_2025022810413121" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="21"><img src="assets/photos/微信图片_2025022810413122.jpg" alt="微信图片_2025022810413122" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="22"><img src="assets/photos/微信图片_2025022810413123.jpg" alt="微信图片_2025022810413123" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="23"><img src="assets/photos/微信图片_2025022810413124.jpg" alt="微信图片_2025022810413124" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="24"><img src="assets/photos/微信图片_2025022810413125.jpg" alt="微信图片_2025022810413125" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="25"><img src="assets/photos/微信图片_2025022810413126.jpg" alt="微信图片_2025022810413126" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="26"><img src="assets/photos/微信图片_2025022810413127.jpg" alt="微信图片_2025022810413127" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="27"><img src="assets/photos/微信图片_2025022810413128.jpg" alt="微信图片_2025022810413128" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="28"><img src="assets/photos/微信图片_2025022810413129.jpg" alt="微信图片_2025022810413129" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="29"><img src="assets/photos/微信图片_202502281041313.jpg" alt="微信图片_202502281041313" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="30"><img src="assets/photos/微信图片_2025022810413130.jpg" alt="微信图片_2025022810413130" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="31"><img src="assets/photos/微信图片_2025022810413131.jpg" alt="微信图片_2025022810413131" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="32"><img src="assets/photos/微信图片_2025022810413132.jpg" alt="微信图片_2025022810413132" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="33"><img src="assets/photos/微信图片_2025022810413133.jpg" alt="微信图片_2025022810413133" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="34"><img src="assets/photos/微信图片_2025022810413134.jpg" alt="微信图片_2025022810413134" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="35"><img src="assets/photos/微信图片_202502281041314.jpg" alt="微信图片_202502281041314" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="36"><img src="assets/photos/微信图片_202502281041315.jpg" alt="微信图片_202502281041315" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="37"><img src="assets/photos/微信图片_202502281041316.jpg" alt="微信图片_202502281041316" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="38"><img src="assets/photos/微信图片_202502281041317.jpg" alt="微信图片_202502281041317" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="39"><img src="assets/photos/微信图片_202502281041318.jpg" alt="微信图片_202502281041318" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="40"><img src="assets/photos/微信图片_202502281041319.jpg" alt="微信图片_202502281041319" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="41"><img src="assets/photos/微信图片_20250228105238.jpg" alt="微信图片_20250228105238" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="42"><img src="assets/photos/微信图片_20250228105919.jpg" alt="微信图片_20250228105919" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="43"><img src="assets/photos/微信图片_20250228105923.jpg" alt="微信图片_20250228105923" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="44"><img src="assets/photos/微信图片_20250228105932.jpg" alt="微信图片_20250228105932" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="45"><img src="assets/photos/微信图片_20250228110734.jpg" alt="微信图片_20250228110734" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="46"><img src="assets/photos/微信图片_20250228110738.jpg" alt="微信图片_20250228110738" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="47"><img src="assets/photos/微信图片_20250228112807.jpg" alt="微信图片_20250228112807" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="48"><img src="assets/photos/微信图片_202502281128071.jpg" alt="微信图片_202502281128071" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="49"><img src="assets/photos/微信图片_202502281128072.jpg" alt="微信图片_202502281128072" loading="lazy" decoding="async"></figure>
+      <figure class="ph" data-index="50"><img src="assets/photos/微信图片_202502281128073.jpg" alt="微信图片_202502281128073" loading="lazy" decoding="async"></figure>
+  </main>
+
+  <div class="lb" id="lb" aria-hidden="true">
+    <button class="close" id="lbClose" aria-label="关闭">✕</button>
+    <button class="nav prev" id="lbPrev" aria-label="上一张">←</button>
+    <img id="lbImg" src="" alt="" />
+    <button class="nav next" id="lbNext" aria-label="下一张">→</button>
+    <div class="counter" id="lbCounter"></div>
+  </div>
+
+  <footer>© 曾美玲 · <a href="index.html">返回作品集主页</a></footer>
+
+<script>
+  (function () {
+    var figures = Array.prototype.slice.call(document.querySelectorAll('.ph'));
+    var lb = document.getElementById('lb');
+    var lbImg = document.getElementById('lbImg');
+    var counter = document.getElementById('lbCounter');
+    var cur = 0;
+
+    function show(i) {
+      cur = (i + figures.length) % figures.length;
+      var img = figures[cur].querySelector('img');
+      lbImg.src = img.getAttribute('src');
+      lbImg.alt = img.alt;
+      counter.textContent = (cur + 1) + ' / ' + figures.length;
+    }
+    function open(i) { show(i); lb.classList.add('open'); lb.setAttribute('aria-hidden', 'false'); document.body.style.overflow = 'hidden'; }
+    function close() { lb.classList.remove('open'); lb.setAttribute('aria-hidden', 'true'); document.body.style.overflow = ''; }
+
+    figures.forEach(function (f) {
+      f.addEventListener('click', function () { open(figures.indexOf(f)); });
+    });
+    document.getElementById('lbClose').addEventListener('click', close);
+    document.getElementById('lbPrev').addEventListener('click', function (e) { e.stopPropagation(); show(cur - 1); });
+    document.getElementById('lbNext').addEventListener('click', function (e) { e.stopPropagation(); show(cur + 1); });
+    lb.addEventListener('click', function (e) { if (e.target === lb) close(); });
+    document.addEventListener('keydown', function (e) {
+      if (!lb.classList.contains('open')) return;
+      if (e.key === 'Escape') close();
+      else if (e.key === 'ArrowLeft') show(cur - 1);
+      else if (e.key === 'ArrowRight') show(cur + 1);
+    });
+    var tx = null;
+    lb.addEventListener('touchstart', function (e) { tx = e.changedTouches[0].clientX; }, { passive: true });
+    lb.addEventListener('touchend', function (e) {
+      if (tx === null) return;
+      var dx = e.changedTouches[0].clientX - tx;
+      if (dx > 50) show(cur - 1); else if (dx < -50) show(cur + 1);
+      tx = null;
+    }, { passive: true });
+  })();
+</script>
+</body>
+</html>
